@@ -2,6 +2,7 @@ module.exports = {
     title: "Vuepress-reco-yuany3721",
     description: " ",
     dest: "docs",
+    // base: "/Vuepress-yuany3721/", // for github pages assets link
     head: [
         ["link", { rel: "icon", href: "/favicon.ico" }],
         ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }],
