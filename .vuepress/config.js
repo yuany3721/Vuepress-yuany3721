@@ -3,18 +3,14 @@ module.exports = {
     description: " ",
     dest: "dist",
     head: [
+        ["link", { rel: "icon", href: "/favicon.ico" }],
+        ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }],
+        ["link", { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" }],
         [
             "link",
             {
-                rel: "icon",
-                href: "/favicon.ico",
-            },
-        ],
-        [
-            "meta",
-            {
-                name: "viewport",
-                content: "width=device-width,initial-scale=1,user-scalable=no",
+                rel: "stylesheet",
+                href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css",
             },
         ],
     ],
@@ -25,6 +21,7 @@ module.exports = {
         },
     },
     themeConfig: {
+        subSidebar: "auto",
         nav: [
             {
                 text: "主页",
@@ -36,19 +33,41 @@ module.exports = {
                 link: "/timeline/",
                 icon: "reco-date",
             },
-            // {
-            //     text: "杂谈",
-            //     icon: "reco-message",
-            //     items: [
-            //         {
-            //             text: "杂谈",
-            //             link: "/docs/",
-            //         },
-            //     ],
-            // },
+            {
+                text: "更新日志",
+                icon: "reco-suggestion",
+                items: [
+                    {
+                        text: "Web",
+                        link: "/updatelog/Web/",
+                    },
+                    {
+                        text: "Bot",
+                        link: "/updatelog/Bot/",
+                    },
+                ],
+            },
         ],
         sidebar: {
-            "/docs/": ["", "sort"],
+            "/updatelog/": [
+                "",
+                {
+                    title: "Bot",
+                    collapsable: true,
+                    children: ["/updatelog/Bot/", "/updatelog/Bot/21.08.20前累积更新日志"],
+                },
+                {
+                    title: "Web",
+                    collapsable: true,
+                    children: [
+                        "/updatelog/Web/",
+                        "/updatelog/Web/22.05.16前累积更新日志",
+                        "/updatelog/Web/21.08.16前累积更新日志",
+                    ],
+                },
+            ],
+            "/updatelog/Bot/": ["", "21.08.20前累积更新日志"],
+            "/updatelog/Web/": ["", "22.05.16前累积更新日志", "21.08.16前累积更新日志"],
         },
         type: "blog",
         blogConfig: {
@@ -61,20 +80,6 @@ module.exports = {
                 text: "标签",
             },
         },
-        // friendLink: [
-        //     {
-        //         title: "CSDN",
-        //         desc: "我的CSDN博客地址",
-        //         email: "zuxian_fu@163.com",
-        //         link: "https://blog.csdn.net/image_fzx",
-        //     },
-        //     {
-        //         title: "github",
-        //         desc: "我的github地址",
-        //         avatar: "./avatar.png",
-        //         link: "https://github.com/zuxian",
-        //     },
-        // ],
         logo: "/logo.png",
         search: true,
         searchMaxSuggestions: 10,
@@ -82,10 +87,17 @@ module.exports = {
         author: "yuany3721",
         authorAvatar: "/avatar.png",
         // "record": "xxxx",
-        // startYear: "2020",
+        startYear: "2022",
         modePicker: false,
     },
     markdown: {
         lineNumbers: true,
+        anchor: { permalink: false },
+        toc: { includeLevel: [1, 2] },
+        extendMarkdown: (md) => {
+            // katex公式
+            md.use(require("markdown-it-katex"));
+            md.set({ html: true });
+        },
     },
 };
