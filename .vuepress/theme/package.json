@@ -28,6 +28,7 @@
     "@vuepress/plugin-medium-zoom": "1.5.0",
     "docsearch.js": "2.6.3",
     "md5": "2.2.1",
+    "reco-yuany3721": "file:",
     "vue-click-outside": "1.1.0",
     "vue-demi": "^0.5.3",
     "vuepress-plugin-smooth-scroll": "^0.0.9"
