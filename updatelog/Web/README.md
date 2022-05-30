@@ -2,6 +2,10 @@
 title: Web更新日志
 ---
 
+## 22.05.30
+
+1. 使用 vite + vue3 + ts + element-plus 重构[主页](https://yuany3721.top)，整理各项目
+
 ## 22.05.17
 
 1. 迁移MDBlog至[Vuepress](http://blog.yuany3721.top)，更新日志同步迁移到[Vuepress](http://blog.yuany3721.top/updatelog)
