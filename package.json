@@ -4,7 +4,7 @@
   "author": "yuany3721",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "mv docs/CNAME CNAME; vuepress build .; mv CNAME docs/CNAME"
+    "build": "vuepress build ."
   },
   "devDependencies": {
     "vuepress": "1.8.2",
