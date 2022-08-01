@@ -4,7 +4,6 @@ title: Bot更新日志
 ## 21.09.15
 
 1.  更新mirai-core-jvm至2.7.1-dev-1，修复bot无法发送群聊图片的问题 参考[mirai#1536](https://github.com/mamoe/mirai/issues/1536)
-2. $test_i^2 + \sqrt{3x-1}$
 
 ## 21.09.07
 
