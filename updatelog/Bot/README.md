@@ -1,6 +1,11 @@
 ---
 title: Bot更新日志
 ---
+
+## 22.11.04
+
+1. 由于服务器到期，暂停Bot服务，待迁移到新服务器
+
 ## 21.09.15
 
 1.  更新mirai-core-jvm至2.7.1-dev-1，修复bot无法发送群聊图片的问题 参考[mirai#1536](https://github.com/mamoe/mirai/issues/1536)
