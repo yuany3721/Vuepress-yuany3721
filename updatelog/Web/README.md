@@ -2,32 +2,9 @@
 title: Web更新日志
 ---
 
-## 22.11.04
-1. 迁移域名至yuany3721.site，暂停部分暂未迁移服务
+## 23.05.08
+1. 新增进制转换小工具
 
-## 22.10.06
-1. 简化tag分类标注
-
-## 22.07.31
-1. 简化tag标注
-
-## 22.05.31
-
-1. 首页加入必应首页图片背景，修改相应样式
-
-## 22.05.30
-
-1. 使用 vite + vue3 + ts + element-plus 重构[主页](https://yuany3721.top)，整理各项目
-
-## 22.05.17
-
-1. 迁移MDBlog至[Vuepress](http://blog.yuany3721.top)，更新日志同步迁移到[Vuepress](http://blog.yuany3721.top/updatelog)
-
-    主题魔改自优秀的[vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com)
-
-    ~~之前没发现Vuepress和markdown-it-katex跑去写了个基于flask的markdown文档管理页面，真像个大冤种呢~~
-
-## 22.05.16
-
-1. 使用[docsify](https://github.com/docsifyjs/docsify/)迁移更新日志到[新的更新日志](http://updatelog.yuany3721.top)
-
+## 23.05.02
+1. 新增车牌归属地查询小工具
+2. 修改部分页面样式，删除冗余代码
