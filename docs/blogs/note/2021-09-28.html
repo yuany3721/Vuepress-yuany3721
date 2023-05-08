@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>常见gcc编译问题解决方法集 | Vuepress-reco-yuany3721</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css">
+    <meta name="description" content=" ">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.22a3fc70.css" as="style"><link rel="preload" href="/assets/js/app.f4cb76d2.js" as="script"><link rel="preload" href="/assets/js/4.ef1085df.js" as="script"><link rel="preload" href="/assets/js/1.f43eb6c5.js" as="script"><link rel="preload" href="/assets/js/19.44636b8d.js" as="script"><link rel="prefetch" href="/assets/js/10.90950868.js"><link rel="prefetch" href="/assets/js/11.65563eb1.js"><link rel="prefetch" href="/assets/js/12.a7405202.js"><link rel="prefetch" href="/assets/js/13.13b1f3b5.js"><link rel="prefetch" href="/assets/js/14.370d554d.js"><link rel="prefetch" href="/assets/js/15.245b99f9.js"><link rel="prefetch" href="/assets/js/16.890f4462.js"><link rel="prefetch" href="/assets/js/17.b2dd1743.js"><link rel="prefetch" href="/assets/js/18.37f470b9.js"><link rel="prefetch" href="/assets/js/2.d2df9f30.js"><link rel="prefetch" href="/assets/js/20.6ae008a6.js"><link rel="prefetch" href="/assets/js/21.ba053792.js"><link rel="prefetch" href="/assets/js/22.1e64b6b1.js"><link rel="prefetch" href="/assets/js/23.fc489ac5.js"><link rel="prefetch" href="/assets/js/24.31a1053d.js"><link rel="prefetch" href="/assets/js/25.3b336db7.js"><link rel="prefetch" href="/assets/js/26.8acbbdfe.js"><link rel="prefetch" href="/assets/js/27.4368dbcc.js"><link rel="prefetch" href="/assets/js/28.1ede1c81.js"><link rel="prefetch" href="/assets/js/29.cde56a59.js"><link rel="prefetch" href="/assets/js/30.580f0106.js"><link rel="prefetch" href="/assets/js/31.411abc70.js"><link rel="prefetch" href="/assets/js/32.e386a437.js"><link rel="prefetch" href="/assets/js/33.5d53e2d3.js"><link rel="prefetch" href="/assets/js/34.f699359a.js"><link rel="prefetch" href="/assets/js/35.9968c38e.js"><link rel="prefetch" href="/assets/js/36.fb2a941e.js"><link rel="prefetch" href="/assets/js/37.14d14770.js"><link rel="prefetch" href="/assets/js/38.3651834a.js"><link rel="prefetch" href="/assets/js/39.24efa087.js"><link rel="prefetch" href="/assets/js/40.b6197ede.js"><link rel="prefetch" href="/assets/js/41.ac424491.js"><link rel="prefetch" href="/assets/js/42.b82a1669.js"><link rel="prefetch" href="/assets/js/43.b600e975.js"><link rel="prefetch" href="/assets/js/44.fcab14a1.js"><link rel="prefetch" href="/assets/js/45.51ca55bf.js"><link rel="prefetch" href="/assets/js/46.2c87e9a1.js"><link rel="prefetch" href="/assets/js/47.38c27f66.js"><link rel="prefetch" href="/assets/js/48.31d9499b.js"><link rel="prefetch" href="/assets/js/49.c4a5d50e.js"><link rel="prefetch" href="/assets/js/5.ac1828a4.js"><link rel="prefetch" href="/assets/js/50.36a288a8.js"><link rel="prefetch" href="/assets/js/51.5041c2d8.js"><link rel="prefetch" href="/assets/js/52.f4519513.js"><link rel="prefetch" href="/assets/js/53.96327564.js"><link rel="prefetch" href="/assets/js/54.7eb2c0b3.js"><link rel="prefetch" href="/assets/js/55.41b64eee.js"><link rel="prefetch" href="/assets/js/56.66ef6f7c.js"><link rel="prefetch" href="/assets/js/57.67efde2e.js"><link rel="prefetch" href="/assets/js/58.aafb456c.js"><link rel="prefetch" href="/assets/js/59.484083d7.js"><link rel="prefetch" href="/assets/js/6.2b28ac4c.js"><link rel="prefetch" href="/assets/js/60.69eb0e71.js"><link rel="prefetch" href="/assets/js/61.f6cc2da3.js"><link rel="prefetch" href="/assets/js/62.87e27c12.js"><link rel="prefetch" href="/assets/js/63.94e2f29f.js"><link rel="prefetch" href="/assets/js/64.43e125db.js"><link rel="prefetch" href="/assets/js/65.99592cc4.js"><link rel="prefetch" href="/assets/js/66.6d29e07f.js"><link rel="prefetch" href="/assets/js/67.44748cf0.js"><link rel="prefetch" href="/assets/js/68.6857876e.js"><link rel="prefetch" href="/assets/js/69.cc55a4b7.js"><link rel="prefetch" href="/assets/js/7.c48087aa.js"><link rel="prefetch" href="/assets/js/70.d1094bc4.js"><link rel="prefetch" href="/assets/js/71.436b095f.js"><link rel="prefetch" href="/assets/js/72.962a4e3e.js"><link rel="prefetch" href="/assets/js/73.e23f8227.js"><link rel="prefetch" href="/assets/js/74.f3b7539b.js"><link rel="prefetch" href="/assets/js/75.2ecba2de.js"><link rel="prefetch" href="/assets/js/8.ff08a375.js"><link rel="prefetch" href="/assets/js/9.683405e1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.22a3fc70.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2b92a942><div data-v-2b92a942><div class="password-shadow password-wrapper-out" style="display:none;" data-v-24de1186 data-v-2b92a942 data-v-2b92a942><h3 class="title" data-v-24de1186 data-v-24de1186>Vuepress-reco-yuany3721</h3> <p class="description" data-v-24de1186 data-v-24de1186> </p> <label id="box" class="inputBox" data-v-24de1186 data-v-24de1186><input type="password" value="" data-v-24de1186> <span data-v-24de1186>Konck! Knock!</span> <button data-v-24de1186>OK</button></label> <div class="footer" data-v-24de1186 data-v-24de1186><span data-v-24de1186><i class="iconfont reco-theme" data-v-24de1186></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-24de1186>vuePress-theme-reco</a></span> <span data-v-24de1186><i class="iconfont reco-copyright" data-v-24de1186></i> <a data-v-24de1186><span data-v-24de1186>yuany3721</span>
+            
+          <span data-v-24de1186>2022 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-2b92a942><header class="navbar" data-v-2b92a942><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="Vuepress-reco-yuany3721" class="logo"> <span class="site-name">Vuepress-reco-yuany3721</span></a> <div class="links"><!----> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/blog/" class="nav-link"><i class="undefined"></i>
+  blog
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随记/" class="nav-link"><i class="undefined"></i>
+  随记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-suggestion"></i>
+      更新日志
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/updatelog/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/updatelog/Bot/" class="nav-link"><i class="undefined"></i>
+  Bot
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-2b92a942></div> <aside class="sidebar" data-v-2b92a942><div class="personal-info-wrapper" data-v-29bd5bbe data-v-2b92a942><img src="/avatar.png" alt="author-avatar" class="personal-img" data-v-29bd5bbe> <h3 class="name" data-v-29bd5bbe>
+    yuany3721
+  </h3> <div class="num" data-v-29bd5bbe><div data-v-29bd5bbe><h3 data-v-29bd5bbe>64</h3> <h6 data-v-29bd5bbe>文章</h6></div> <div data-v-29bd5bbe><h3 data-v-29bd5bbe>20</h3> <h6 data-v-29bd5bbe>标签</h6></div></div> <ul class="social-links" data-v-29bd5bbe></ul> <hr data-v-29bd5bbe></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/blog/" class="nav-link"><i class="undefined"></i>
+  blog
+</a></li><li class="dropdown-item"><!----> <a href="/categories/随记/" class="nav-link"><i class="undefined"></i>
+  随记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/学习笔记/" class="nav-link"><i class="undefined"></i>
+  学习笔记
+</a></li><li class="dropdown-item"><!----> <a href="/categories/杂谈/" class="nav-link"><i class="undefined"></i>
+  杂谈
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间轴
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-suggestion"></i>
+      更新日志
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/updatelog/Web/" class="nav-link"><i class="undefined"></i>
+  Web
+</a></li><li class="dropdown-item"><!----> <a href="/updatelog/Bot/" class="nav-link"><i class="undefined"></i>
+  Bot
+</a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-24de1186 data-v-2b92a942><h3 class="title" data-v-24de1186 data-v-24de1186>常见gcc编译问题解决方法集</h3> <!----> <label id="box" class="inputBox" data-v-24de1186 data-v-24de1186><input type="password" value="" data-v-24de1186> <span data-v-24de1186>Konck! Knock!</span> <button data-v-24de1186>OK</button></label> <div class="footer" data-v-24de1186 data-v-24de1186><span data-v-24de1186><i class="iconfont reco-theme" data-v-24de1186></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-24de1186>vuePress-theme-reco</a></span> <span data-v-24de1186><i class="iconfont reco-copyright" data-v-24de1186></i> <a data-v-24de1186><span data-v-24de1186>yuany3721</span>
+            
+          <span data-v-24de1186>2022 - </span>
+          2023
+        </a></span></div></div> <div data-v-2b92a942><main class="page" style="padding-right:0;"><section><div class="page-title"><h1 class="title">常见gcc编译问题解决方法集</h1> <div data-v-6b827e97><i class="iconfont reco-account" data-v-6b827e97><span data-v-6b827e97>一见</span></i> <i class="iconfont reco-date" data-v-6b827e97><span data-v-6b827e97>2021/9/28</span></i> <!----> <i class="tags iconfont reco-tag" data-v-6b827e97><span class="tag-item" data-v-6b827e97>gcc</span><span class="tag-item" data-v-6b827e97>转载</span></i></div></div> <div class="theme-reco-content content__default"><blockquote><p>作者：一见
+参考<a href="https://www.cnblogs.com/aquester/p/9891584.html" target="_blank" rel="noopener noreferrer">https://www.cnblogs.com/aquester/p/9891584.html<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>除非明确说明，本文内容仅针对x86/x86_64的Linux开发环境，有朋友说baidu不到，开个贴记录一下（加粗字体是关键词）：</p> <p>用<code>-Wl,-Bstatic</code>指定链接静态库，使用<code>-Wl,-Bdynamic</code>指定链接共享库，使用示例：</p> <p><code>-Wl,-Bstatic -lmysqlclient_r -lssl -lcrypto -Wl,-Bdynamic -lrt -Wl,-Bdynamic -pthread -Wl,-Bstatic -lgtest</code></p> <p>（&quot;-Wl&quot;表示是传递给链接器ld的参数，而不是编译器gcc/g++的参数。）</p> <ol><li>下面是因为没有指定链接参数<code>-lz</code>（<code>/usr/lib/libz.so</code>，<code>/usr/lib/libz.a</code> ）</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/mysql/lib/mysql/libmysqlclient.a(my_compress.c.o): In function `my_uncompress':
+/home/software/mysql-5.5.24/mysys/my_compress.c:122: undefined reference to `uncompress'
+/usr/local/mysql/lib/mysql/libmysqlclient.a(my_compress.c.o): In function `my_compress_alloc':
+/home/software/mysql-5.5.24/mysys/my_compress.c:71: undefined reference to `compress'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="2"><li>下面是因为没有指定编译链接参数<code>-pthread</code>（注意不仅仅是<code>-lpthraed</code>）</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/mysql/lib/mysql/libmysqlclient.a(charset.c.o): In function `get_charset_name':
+/home/zhangsan/mysql-5.5.24/mysys/charset.c:533: undefined reference to `pthread_once'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="3"><li>下面这个是因为没有指定链接参数<code>-lrt</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/thirdparty/curl/lib/libcurl.a(libcurl_la-timeval.o): In function `curlx_tvnow':
+timeval.c:(.text+0xe9): undefined reference to `clock_gettime'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="4"><li>下面这个是因为没有指定链接参数<code>-ldl</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/thirdparty/openssl/lib/libcrypto.a(dso_dlfcn.o): In function `dlfcn_globallookup':
+dso_dlfcn.c:(.text+0x4c): undefined reference to `dlopen'
+dso_dlfcn.c:(.text+0x62): undefined reference to `dlsym'
+dso_dlfcn.c:(.text+0x6c): undefined reference to `dlclose'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="5"><li>下面这个是因为指定了链接参数<code>-static</code>，它的存在，要求链接的必须是静态库，而不能是共享库</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>ld: attempted static link of dynamic object
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果是以<code>-L</code>加<code>-l</code>方式指定，则目录下必须有<code>.a</code>文件存在，否则会报<code>-l</code>的库文件找不到：<code>ld: cannot find -lACE</code></p> <ol start="6"><li>GCC编译遇到如下的错误，可能是因为在编译时没有指定<code>-fPIC</code>，记住：<code>-fPIC</code>即是编译参数，也是链接参数</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>relocation R_x86_64_32S against `vtable for CMyClass` can not be used when making a shared object
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="7"><li>下面的错误表示gcc编译时需要定义宏<code>__STDC_FORMAT_MACROS</code>，并且必须包含头文件<code>inttypes.h</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>test.cpp:35: error: expected `)' before 'PRIu64'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="8"><li>下面是因为在x86机器（32位）上编译没有指定编译参数<code>-march=pentium4</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>../../src/common/libmooon.a(logger.o): In function `atomic_dec_and_test':
+../../include/mooon/sys/atomic_gcc.h:103: undefined reference to `__sync_sub_and_fetch_4'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="9"><li>下列错误可能是因为多了个<code>}</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>error: expected declaration before '}' token
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="10"><li>下列错误可能是因为少了个<code>}</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>error: expected `}' at end of input
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="11"><li>下面这个错误是编译一个共享库时，该共享库依赖的一静态库编译时没有加<code>-fPIC</code>参数，解决方法为带<code>-fPIC</code>重新编译被依赖的静态库</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>relocation R_X86_64_32 against `a local symbol' can not be used when making a shared object; recompile with -fPIC
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="12"><li>下面这个错误，是因为头文件中使用<code>_syscall0(pid_t, gettid)</code>不当引起的</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>./test.o: In function `gettid()':
+./test.h:17: multiple definition of `gettid()'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>正确的用法是使用&quot;inline&quot;或&quot;static inline&quot;修饰一下：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>inline _syscall0(pid_t, gettid)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>或</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>static inline _syscall0(pid_t, gettid)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>当然也可以这样：
+在.h头文件中：<code>extern &quot;C&quot; pid_t gettid(void);</code>
+在.cpp文件中：<code>_syscall0(pid_t, gettid)</code></p> <p>_syscall0是一个宏，定义一个函数的实现。</p> <ol start="13"><li>下列编译告警是因为一个static类型的函数未被使用</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>my.cpp:364: warning: 'int my_function(const cgicc::Cgicc&amp;, const std::string&amp;)' defined but not used
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>只需使用<code>__attribute__((unused))</code>修饰函数的声明即可：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>static int __attribute__((unused)) my_function(const cgicc::Cgicc&amp;, const std::string&amp;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="14"><li>执行thrift的configure时遇到如下的错误（thrift-0.9.0和thrift-0.9.1遇到过）：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>checking for setsockopt in -lsocket... no
+checking for BN_init in -lcrypto... no
+configure: error: &quot;Error: libcrypto required.&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>原因可能是因为编译安装openssl时指定了<code>--prefix</code>，比如<code>--prefix=/usr/local/thirdparty/openssl</code>，可这样解决：
+不指定<code>thrift</code>的<code>configure</code>的<code>--with-openssl=/usr/local/thirdparty/openssl</code>，改为：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>CPPFLAGS=&quot;-I/usr/local/thirdparty/openssl/include&quot; LDFLAGS=&quot;-ldl -L/usr/local/thirdparty/openssl/lib&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>替代它就OK了。</p> <ol start="15"><li>下面这个编译错误（表现为g++进入死循环），可能是由于缺少右大括号<code>}</code>导致的，比如定义名字空间时少了<code>}</code>：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/include/c++/4.1.2/tr1/type_traits:408: error: 'size_t' is not a member of 'db_proxy::std'
+/usr/include/c++/4.1.2/tr1/type_traits:408: error: 'size_t' is not a member of 'db_proxy::std'
+/usr/include/c++/4.1.2/tr1/mu_iterate.h:49: error: 'std::tr1' has not been declared
+/usr/include/c++/4.1.2/tr1/mu_iterate.h:49: error: 'std::tr1' has not been declared
+/usr/include/c++/4.1.2/tr1/bind_iterate.h:78: error: 'std::tr1' has not been declared
+/usr/include/c++/4.1.2/tr1/bind_iterate.h:78: error: 'std::tr1' has not been declared
+/usr/include/c++/4.1.2/tr1/bind_iterate.h:78: error: 'std::tr1' has not been declared
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><ol start="16"><li>protoc编译错误，下面错误是因为没有在.proto文件所在目录下执行：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/tmp/test.proto: File does not reside within any path specified using --proto_path (or -I).  You must specify a --proto_path which encompasses this file.  Note that the proto_path must be an exact prefix of the .proto file names -- protoc is too dumb to figure out when two paths (e.g. absolute and relative) are equivalent (it's harder than you think).
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>解决办法有两个：一是在.proto文件所在目录下执行protoc，二是为protoc指定参数--proto_path，参数值为.proto文件所在目录。</p> <ol start="17"><li>下面这个编译错误，可能是因为在全局域内调用一个类对象的成员函数，全局域内是不能直接执行函的：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>error: expected constructor, destructor, or type conversion before '-&gt;' token
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="18"><li>下面这个错误是因为没有链接OpenSSL的libcrypto库，或者使用了静态库，而顺序不对：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>undefined symbol: EVP_enc_null
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="19"><li>下列是链接错误，不是编译错误，加上<code>-pthread</code>即可，注意不是<code>-lpthread</code>：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/local/mysql/lib/mysql/libmysqlclient.a(charset.c.o): In function `get_charset_name':
+/home/software/mysql-5.5.24/mysys/charset.c:533: undefined reference to `pthread_once'
+/usr/local/mysql/lib/mysql/libmysqlclient.a(charset.c.o): In function `get_charset_number':
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="20"><li>依赖OpenSSL（假设安装在/usr/local/thirdparty/openssl-1.0.2a）时，如果</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --prefix=/usr/local/thirdparty/libssh2-1.6.0 --with-libssl-prefix=/usr/local/thirdparty/openssl-1.0.2a
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>时遇到如下错误：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>configure: error: No crypto library found!
+Try --with-libssl-prefix=PATH
+ or --with-libgcrypt-prefix=PATH
+ or --with-wincng on Windows
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>可以如下方法解决：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --prefix=/usr/local/thirdparty/libssh2-1.6.0 --with-openssl CPPFLAGS=&quot;-I/usr/local/thirdparty/openssl-1.0.2a/include&quot; LDFLAGS=&quot;-L/usr/local/thirdparty/openssl-1.0.2a/lib&quot;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="21"><li>错误<code>error: expected primary-expression before ‘;’ token</code>可能是因为如下原因：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>UserInfoInternal* user_info_internal = new UserInfoInternal;
+delete user_info; // 这里应当是user_info_internal
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="22"><li>下面这个编译错误的原因是定义字符串宏时没有加双引引号：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>example.cpp:563:16: error: too many decimal points in number
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如定义成了：<code>#define IP1 127.0.0.1</code>，改成<code>#define IP1 &quot;127.0.0.1&quot;</code>后问题即解决。</p> <ol start="23"><li>下面这个编译错误是因为g++命令参数没写对，多了个<code>-</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>g++: -E or -x required when input is from standard input
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>CPPFLAGS=-pthread -
+g++ -g -o $@ $^ $(CPPFLAGS) $(LDFLAGS)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><ol start="24"><li><code>libjson_7.6.1</code>编译错误：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>makefile:180: Extraneous text after `else' directive
+makefile:183: *** only one `else' per conditional.  Stop.
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>解决办法：
+找到makefile文件的第180行，将<code>else ifeq ($(BUILD_TYPE), debug)</code>，改成两行内嵌方式：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># BUILD_TYPE specific settings
+ifeq ($(BUILD_TYPE), small)
+    CXXFLAGS     = $(cxxflags_small)
+else
+    ifeq ($(BUILD_TYPE), debug) # 不能和else同一行，否则Makefile语法错误，不支持else ifeq
+        CXXFLAGS     = $(cxxflags_debug)
+        libname     := $(libname_debug)
+    else
+        CXXFLAGS    ?= $(cxxflags_default)
+    endif
+endif
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>可以通过设置环境变量来设置<code>BUILD_TYPE</code>，如：<code>export BUILD_TYPE=debug</code>
+也可以通过环境变量来设置<code>make install</code>时的安装目录，如：<code>export prefix=/usr/local/libjson</code></p> <p>相关小知识：
+在Makefile文件中，<code>prefix=/usr</code>和<code>prefix?=/usr</code>，是有区别的，前者赋值不能通过环境变量覆盖，后者则可以使用环境变量的值覆盖。</p> <p>另外，请将第271行删除：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cp -rv $(srcdir)/Dependencies/ $(include_path)/$(libname_hdr)/$(srcdir)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>改成：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>cp -rv _internal/Dependencies/ $(include_path)/$(libname_hdr)/$(srcdir)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>还有第258行前插入如一条命令：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir -p $(inst_path)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>否则<code>cp -f ./$(lib_target) $(inst_path)</code>，lib将成库文件名。</p> <ol start="25"><li>编译gcc时，如果遇到下面这个错误，这是因为运行时找不到mpc、mpfr和gmp的so文件：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>checking for x86_64-unknown-linux-gnu-nm... /data/gcc-4.8.2_src/host-x86_64-unknown-linux-gnu/gcc/nm
+checking for x86_64-unknown-linux-gnu-ranlib... ranlib
+checking for x86_64-unknown-linux-gnu-strip... strip
+checking whether ln -s works... yes
+checking for x86_64-unknown-linux-gnu-gcc... /data/gcc-4.8.2_src/host-x86_64-unknown-linux-gnu/gcc/xgcc -B/data/gcc-4.8.2_src/host-x86_64-unknown-linux-gnu/gcc/ -B/data/gcc-4.8.2/x86_64-unknown-linux-gnu/bin/ -B/data/gcc-4.8.2/x86_64-unknown-linux-gnu/lib/ -isystem /data/gcc-4.8.2/x86_64-unknown-linux-gnu/include -isystem /data/gcc-4.8.2/x86_64-unknown-linux-gnu/sys-include   
+checking for suffix of object files... configure: error: in `/data/gcc-4.8.2_src/x86_64-unknown-linux-gnu/libgcc':
+configure: error: cannot compute suffix of object files: cannot compile
+See `config.log' for more details.
+make[2]: *** [configure-stage1-target-libgcc] 错误 1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>所以只需要如下操作下即可：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>export LD_LIBRARY_PATH=/usr/local/mpc/lib:/usr/local/mpfr/lib:/usr/local/gmp/lib:$LD_LIBRARY_PATH
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>注：gcc-4.8.2依赖mpc、mpfr和gmp：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --prefix=/usr/local/gcc-4.8.2 --with-mpc=/usr/local/mpc-1.0.3 --with-mpfr=/usr/local/mpfr-3.1.3 --with-gmp=/usr/local/gmp-6.0.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>而mpc又依赖于：mpfr和gmp：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>./configure --prefix=/usr/local/mpc-1.0.3 --with-mpfr=/usr/local/mpfr-3.1.3 --with-gmp=/usr/local/gmp-6.0.0
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="26"><li>编译gcc时，如果遇到下面这个错误：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>fatal error: gnu/stubs-32.h: No such file or directory
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这是因为在x86_64上，默认会编译出32位和64位两个版本。这样编译32位时，需要机器上有32位的libc头文件和库文件，但一些机器上可能没有，比如没有/lib目录，只有/lib64目录，这表示不支持32位的libc。为解决这个问题，可以禁止编译32位版本，在configure时带上参数<code>--disable-multilib</code>，或者安装32位版本的glibc。</p> <ol start="27"><li>某次编译遇到如下这样一个链接错误：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>redis_dbi.cpp:224: undefined reference to `sdscatlen(char*, void const*, unsigned long)'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>按常理，这个错误要么是没有指定相应的库，要么是静态库间的顺序问题。</p> <p>但经过检查，这两个原因，而是因为gcc和g++混用原因：</p> <ol><li>库libhiredis.a和libhiredis.so是由gcc编译出来的</li> <li>而调用它的代码是由g++编译的，因此导致了此问题。</li></ol> <p>问题的解决办法有两个：</p> <ol><li><p>修改sdscatlen所在的.h文件，将代码使用</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>#ifdef __cplusplus
+extern &quot;C&quot; {
+#endif
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>修饰起来，或者直接使用<code>extern C</code>修饰函数sdscatlen。</p></li> <li><p>不修改redis的代码，在引用sds.h时加上<code>extern &quot;C&quot; {</code>：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>extern &quot;C&quot; {
+#include &quot;sds.h&quot;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li></ol> <p>上面两个办法均可，当然也可以考虑改用g++编译redis，不过可能会遇到很多错误。
+redis对外供外部直接使用的头文件hiredis.h已使用了<code>extern &quot;C&quot; {</code>，所以不存在问题，只有当跳过hiredis.h，去使用一些内部头文件时需要注意一下。</p> <ol start="28"><li></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>x.hpp:27: error: expected identifier before string constant
+x.hpp:27: error: expected `}' before string constant
+x.hpp:27: error: expected unqualified-id before string constant
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>这个错误，可能是存在和枚举等同名的字符串宏，比如存在下面的宏定义：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>enum DBTYPE
+{
+    UNDEFINE = 0,
+    MYSQL_DB = 1,
+    ORACLE_DB = 2
+};
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>而另一.h文件中定义了宏：
+<code>#define MYSQL_DB &quot;mysql&quot;</code></p> <ol start="29"><li>下面这个错误是因为类成员函数的声明和定义的返回值不相同</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>test.cpp:201:6: 错误：‘bool foo(const string&amp;, const string&amp;, const string&amp;, const string&amp;, const string&amp;, const HBaseRowValue&amp;)’的原型不匹配类‘CTest’中的任何一个
+ bool CHBaseOper::foo(const std::string&amp; tablename, const std::string&amp; rowkey, const std::string&amp; familyname, const std::string&amp; columnname, const std::string&amp; columnvalue, const HBaseRowValue&amp; row_values)
+      ^
+In file included from test.cpp:8:0:
+test.h:58:6: 错误：备选为：int foo(const string&amp;, const string&amp;, const string&amp;, const string&amp;, const string&amp;, const HBaseRowValue&amp;)
+  int foo(const std::string&amp; tablename, const std::string&amp; rowkey, const std::string&amp; familyname, const std::string&amp; columnname, const std::string&amp; columnvalue, const HBaseRowValue&amp; row_values);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="30"><li><code>messenger.cpp:5: error: expected unqualified-id before ':' token</code>
+该编译错误原因是：</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>CMessager:CMessager()
+{
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>即少了个冒号：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>CMessager::CMessager()
+{
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><ol start="31"><li><p><code>unable to find a register to spill in class ‘SIREG’</code>
+编译时如果遇到这个错误，表示遇到一个gcc的bug，最简单的办法是去掉编译参数中的-O3等优化项，然后再试可能就成功了，也可以考虑指定<code>-fno-schedule-insns</code>。</p></li> <li><p>像下面这样一大堆乱七八糟的错误，可以考虑是否为少了<code>}</code>等引起的</p></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/usr/include/c++/4.8.2/bits/stl_list.h:131:15: 错误：‘bidirectional_iterator_tag’不是命名空间‘tom::std’中的一个类型名
+       typedef std::bidirectional_iterator_tag    iterator_category;
+               ^
+/usr/include/c++/4.8.2/bits/stl_list.h: 在成员函数‘_Tp* tom::std::_List_iterator&lt;_tp&gt;::operator-&gt;() const’中:
+/usr/include/c++/4.8.2/bits/stl_list.h:150:16: 错误：‘__addressof’不是‘tom::std’的成员
+       { return std::__addressof(static_cast&lt;_Node*&gt;(_M_node)-&gt;_M_data); } 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>比如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>namespace A { namespace B {
+    。。。。。。
+// 下面少了一个`}`
+} // namespace A { namespace B {
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="33"><li><code>crc32’ cannot be used as a function</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>uint32_t crc32 = crc32(0L, (const unsigned char*)crc32_str.data(), crc32_str.size());
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>错误是因为函数名和变量名相同了，可以改成如下解决：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>uint32_t crc32 = ::crc32(0L, (const unsigned char*)crc32_str.data(), crc32_str.size());
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ol start="34"><li></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>/data/X/mooon/tools/hbase_stress.cpp: In function 'void test_write(const std::map&lt;std::basic_string&lt;char&gt;, std::basic_string&lt;char&gt; &gt;&amp;)':
+/data/X/mooon/tools/hbase_stress.cpp:78:117: error: invalid conversion from 'void (*)(uint8_t, const string&amp;, uint16_t) {aka void (*)(unsigned char, const std::basic_string&lt;char&gt;&amp;, short unsigned int)}' to 'mooon::sys::FunctionWith3Parameter&lt;unsigned char, std::basic_string&lt;char&gt;, short unsigned int&gt;::FunctionPtr {aka void (*)(unsigned char, std::basic_string&lt;char&gt;, short unsigned int)}' [-fpermissive]
+             stress_threads[i] = new mooon::sys::CThreadEngine(mooon::sys::bind(write_thread, i, hbase_ip, hbase_port));                                                                                                                     ^
+In file included from /data/X/mooon/tools/hbase_stress.cpp:24:0:
+/data/X/mooon/tools/../include/mooon/sys/thread_engine.h:777:16: error:   initializing argument 1 of 'mooon::sys::Functor mooon::sys::bind(typename mooon::sys::FunctionWith3Parameter&lt;Parameter1Type, Parameter2Type, Parameter3Type&gt;::FunctionPtr, Parameter1Type, Parameter2Type, Parameter3Type) [with Parameter1Type = unsigned char; Parameter2Type = std::basic_string&lt;char&gt;; Parameter3Type = short unsigned int; typename mooon::sys::FunctionWith3Parameter&lt;Parameter1Type, Parameter2Type, Parameter3Type&gt;::FunctionPtr = void (*)(unsigned char, std::basic_string&lt;char&gt;, short unsigned int)]' [-fpermissive]
+ inline Functor bind(typename FunctionWith3Parameter&lt;Parameter1Type, Parameter2Type, Parameter3Type&gt;::FunctionPtr function_ptr, Parameter1Type parameter1, Parameter2Type parameter2, Parameter3Type parameter3)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面这个错误的意思是第一个参数的类型为</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>void (*)(unsigned char, std::basic_string&lt;char&gt;, short unsigned int)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>但传入的类型为</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>void (*)(unsigned char, const std::basic_string&lt;char&gt;&amp;, short unsigned int)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>从上面的对比可以看出，要求函数的第二个参数为std::string类型，而不是const std::string&amp;类型。</p> <ol start="35"><li></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>conflicting declaration 
+has a previous declaration as
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这个错误可能是因为头文件没有<code>#ifndef</code>，导致引入多次。</p> <ol start="36"><li></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>warning: cannot pass objects of non-POD type ‘const struct std::basic_string&lt;char, std::char_traits&lt;char&gt;, std::allocator&lt;char&gt; &gt;’ through ‘...’; call will abort at runtime
+warning: format ‘%s’ expects type ‘char*’, but argument 3 has type ‘int
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>这个错误是因为格式化<code>%s</code>参数的值为<code>std::string</code>值，这个在运行时可能会触发<code>SIGILL（Illegal instruction）</code>，例如：</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>std::string type;
+std::string name;
+。。。 。。。
+const std::string&amp; key = mooon::utils::CStringUtils::format_string(&quot;%s_%s&quot;, type.c_str(), name);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><ol start="37"><li><p><code>'__curl_rule_01__' is negative</code>
+这个编译错误，是因为在64位平台上编译64位程序，但curl库是32位方式编译的。</p></li> <li></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>countable_log_writer.cpp:54:50: 错误：从类型‘const CCounter*’到类型‘CCounter*’的转换无效 [-fpermissive]
+     return (NULL == counter)? &amp;_default_counter: counter;
+                                                  ^
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>错误实际出在<code>_default_counter</code>的使用上，返回的是非<code>const</code>类型的<code>CCounter*</code>。
+而由于函数<code>get_counter</code>是<code>const</code>类型函数，意味着<code>this</code>也是<code>const</code>类型，
+<code>&amp;_default_counter</code>也就成了<code>const CCounter*</code>类型。
+简单的修改方法是将<code>_default_counter</code>定义成<code>CCounter*</code>指针类型，而非<code>CCounter</code>对象类型。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>CCounter* CCountableLogWriter::get_counter(const std::string&amp; type) const
+{
+    CCounter* counter = NULL;
+    CCounterTable::const_iterator iter = _counter_table.find(type);
+
+
+    if (iter != _counter_table.end())
+        counter = iter-&gt;second;
+    return (NULL == counter)? &amp;_default_counter: counter;
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:0;" data-v-1ab38110></ul></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/assets/js/app.f4cb76d2.js" defer></script><script src="/assets/js/4.ef1085df.js" defer></script><script src="/assets/js/1.f43eb6c5.js" defer></script><script src="/assets/js/19.44636b8d.js" defer></script>
+  </body>
+</html>
