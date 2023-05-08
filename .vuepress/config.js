@@ -36,6 +36,7 @@ module.exports = {
             {
                 text: "更新日志",
                 icon: "reco-suggestion",
+                link: "/updatelog/",
                 items: [
                     {
                         text: "Web",
@@ -61,13 +62,14 @@ module.exports = {
                     collapsable: true,
                     children: [
                         "/updatelog/Web/",
+                        "/updatelog/Web/23.05.01前累积更新日志",
                         "/updatelog/Web/22.05.16前累积更新日志",
                         "/updatelog/Web/21.08.16前累积更新日志",
                     ],
                 },
             ],
             "/updatelog/Bot/": ["", "21.08.20前累积更新日志"],
-            "/updatelog/Web/": ["", "22.05.16前累积更新日志", "21.08.16前累积更新日志"],
+            "/updatelog/Web/": ["", "23.05.01前累积更新日志", "22.05.16前累积更新日志", "21.08.16前累积更新日志"],
         },
         type: "blog",
         blogConfig: {
