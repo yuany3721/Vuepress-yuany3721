@@ -2,8 +2,15 @@
 title: Web更新日志
 ---
 
+## 23.06.14
+1. 将主页从GitPage迁移至阿里云
+
+## 23.06.13
+1. 新增[光功率换算工具]((https://yuany3721.site/tools#光功率单位转换工具))
+2. 修复进制转换工具输入内容含十六进制字符时的bug
+
 ## 23.05.08
-1. 新增进制转换小工具
+1. 新增[进制转换小工具](https://yuany3721.site/tools#进制转换工具)
 2. 恢复ssl访问
 3. 恢复[wlw](https://wlw.yuany3721.site)、[ydpd](https://ydpd.yuany3721.site)访问
 
