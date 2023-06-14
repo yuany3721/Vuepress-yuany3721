@@ -7,7 +7,7 @@ title: Web更新日志
 2. 更新主页的必应每日背景图片来源为[官方来源](https://cn.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1)，使用Flask绕过CORS限制
 
 ## 23.06.13
-1. 新增[光功率换算工具]((https://yuany3721.site/tools#光功率单位转换工具))
+1. 新增[光功率换算工具](https://yuany3721.site/tools#光功率单位转换工具)
 2. 修复进制转换工具输入内容含十六进制字符时的bug
 
 ## 23.05.08
