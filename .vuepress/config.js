@@ -34,6 +34,11 @@ module.exports = {
                 icon: "reco-date",
             },
             {
+                text: "友情链接",
+                link: "https://increcrazer.github.io/",
+                icon: "reco-blog",
+            },
+            {
                 text: "更新日志",
                 icon: "reco-suggestion",
                 link: "/updatelog/",
