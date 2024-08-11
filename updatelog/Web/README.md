@@ -2,6 +2,11 @@
 title: Web更新日志
 ---
 
+## 24.08.11
+1. 部署基于[FileCodeBox](https://github.com/vastsa/FileCodeBox)的[文件中转站](https://filebox.yuany3721.site)
+2. 停止了周计划页面维护与更新
+4. 更新主页内容和链接，更新已暂停服务的说明
+
 ## 23.07.22
 1. 部署基于[homepage](https://github.com/benphelps/homepage)的[导航页](https://home.yuany3721.site)
 2. 部署[focalboard](https://github.com/benphelps/homepage)于[board](https://board.yuany3721.site)

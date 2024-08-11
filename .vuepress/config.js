@@ -33,11 +33,11 @@ module.exports = {
                 link: "/timeline/",
                 icon: "reco-date",
             },
-            {
-                text: "友情链接",
-                link: "https://increcrazer.github.io/",
-                icon: "reco-blog",
-            },
+            // {
+            //     text: "友情链接",
+            //     link: "https://increcrazer.github.io/",
+            //     icon: "reco-blog",
+            // },
             {
                 text: "更新日志",
                 icon: "reco-suggestion",
@@ -53,10 +53,21 @@ module.exports = {
                     },
                 ],
             },
+            {
+                text: "API文档",
+                icon: "reco-document",
+                link: "/readdoc/",
+                items: [
+                    {
+                        text: "GLM3",
+                        link: "/readdoc/glm3/",
+                    },
+                ],
+            },
         ],
         sidebar: {
             "/updatelog/": [
-                "",
+                "/updatelog/",
                 {
                     title: "Bot",
                     collapsable: true,
@@ -73,8 +84,15 @@ module.exports = {
                     ],
                 },
             ],
-            "/updatelog/Bot/": ["", "21.08.20前累积更新日志"],
-            "/updatelog/Web/": ["", "23.05.01前累积更新日志", "22.05.16前累积更新日志", "21.08.16前累积更新日志"],
+            // "/updatelog/Bot/": ["", "21.08.20前累积更新日志"],
+            // "/updatelog/Web/": ["", "23.05.01前累积更新日志", "22.05.16前累积更新日志", "21.08.16前累积更新日志"],
+            "/readdoc/": [
+                "/readdoc/",
+                {
+                    title: "GLM3",
+                    collapsable: false,
+                },
+            ],
         },
         type: "blog",
         blogConfig: {
@@ -87,6 +105,14 @@ module.exports = {
                 text: "标签",
             },
         },
+        friendLink: [
+            {
+                title: "Caeser Wang",
+                desc: "光芯片、QKD大拿！",
+                avatar: "https://increcrazer.github.io/medias/wyafavicon.png",
+                link: "https://increcrazer.github.io/",
+            },
+        ],
         logo: "/logo.png",
         search: true,
         searchMaxSuggestions: 10,
@@ -96,6 +122,7 @@ module.exports = {
         // "record": "xxxx",
         startYear: "2022",
         modePicker: false,
+        smoothScroll: true,
     },
     markdown: {
         lineNumbers: true,
