@@ -62,6 +62,10 @@ module.exports = {
                         text: "GLM3",
                         link: "/readdoc/glm3/",
                     },
+                    {
+                        text: "AD9910",
+                        link: "/readdoc/AD9910/",
+                    },
                 ],
             },
         ],
@@ -90,6 +94,10 @@ module.exports = {
                 "/readdoc/",
                 {
                     title: "GLM3",
+                    collapsable: false,
+                },
+                {
+                    title: "AD9910",
                     collapsable: false,
                 },
             ],
