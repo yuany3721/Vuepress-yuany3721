@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Linux/2022-05-11.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Linux/2022-05-11.html\",\"title\":\"ubuntu下多版本openjdk配置\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"ubuntu下多版本openjdk配置\",\"createTime\":\"2022/05/11\",\"tags\":[\"Ubuntu\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.13,\"words\":40},\"git\":{},\"filePathRelative\":\"随记/Linux/2022-05-11.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"d513be\",\"sort\":10017,\"name\":\"Linux\"}]}")
-export { comp, data }

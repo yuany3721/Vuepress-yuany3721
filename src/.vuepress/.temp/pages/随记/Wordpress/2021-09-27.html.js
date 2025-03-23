@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Wordpress/2021-09-27.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Wordpress/2021-09-27.html\",\"title\":\"WordPress开启debug模式\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"WordPress开启debug模式\",\"createTime\":\"2021/09/27\",\"tags\":[\"Wordpress\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.14,\"words\":43},\"git\":{},\"filePathRelative\":\"随记/Wordpress/2021-09-27.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"8032e0\",\"sort\":10019,\"name\":\"Wordpress\"}]}")
-export { comp, data }

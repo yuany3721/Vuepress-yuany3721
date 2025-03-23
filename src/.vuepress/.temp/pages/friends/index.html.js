@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/friends/index.html.vue"
-const data = JSON.parse("{\"path\":\"/friends/\",\"title\":\"友情链接\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"友情链接\",\"description\":null,\"permalink\":\"/friends/\",\"list\":[{\"name\":\"老王HUB\",\"link\":\"https://increcrazer.github.io/\",\"avatar\":\"https://increcrazer.github.io/medias/wya.png\",\"desc\":\"光芯片、QKD大拿Caeser Wang！\"}],\"draft\":true,\"pageLayout\":\"friends\"},\"headers\":[],\"readingTime\":{\"minutes\":0.1,\"words\":30},\"git\":{},\"filePathRelative\":\"friends.md\",\"type\":\"friends\"}")
-export { comp, data }

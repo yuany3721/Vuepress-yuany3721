@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Windows/2022-04-24.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Windows/2022-04-24.html\",\"title\":\"win10配置maven\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"win10配置maven\",\"createTime\":\"2022/04/24\",\"tags\":[\"Windows\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.28,\"words\":85},\"git\":{},\"filePathRelative\":\"随记/Windows/2022-04-24.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"106173\",\"sort\":10015,\"name\":\"Windows\"}]}")
-export { comp, data }

@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/更新日志/Web/index.html.vue"
-const data = JSON.parse("{\"path\":\"/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/Web/\",\"title\":\"Web更新日志\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Web更新日志\",\"permalink\":\"/更新日志/Web/\"},\"headers\":[],\"readingTime\":{\"minutes\":1.15,\"words\":344},\"git\":{},\"filePathRelative\":\"notes/更新日志/Web/README.md\",\"categoryList\":[{\"id\":\"4358b5\",\"sort\":10007,\"name\":\"notes\"},{\"id\":\"84d646\",\"sort\":10008,\"name\":\"更新日志\"},{\"id\":\"c61266\",\"sort\":10020,\"name\":\"Web\"}]}")
-export { comp, data }

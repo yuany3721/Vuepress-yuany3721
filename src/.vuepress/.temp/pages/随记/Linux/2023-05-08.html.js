@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Linux/2023-05-08.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Linux/2023-05-08.html\",\"title\":\"Certbot配置nginx中ssl访问\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Certbot配置nginx中ssl访问\",\"createTime\":\"2023/05/08 13:00:12\",\"tags\":[\"linux\",\"certbot\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.29,\"words\":87},\"git\":{},\"filePathRelative\":\"随记/Linux/2023-05-08.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"d513be\",\"sort\":10017,\"name\":\"Linux\"}]}")
-export { comp, data }

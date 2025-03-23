@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Python/2022-10-19.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Python/2022-10-19.html\",\"title\":\"修改pip源\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"修改pip源\",\"createTime\":\"2022/10/19 16:34:09\",\"tags\":[\"python\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.35,\"words\":105},\"git\":{},\"filePathRelative\":\"随记/Python/2022-10-19.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"2e88e1\",\"sort\":10016,\"name\":\"Python\"}]}")
-export { comp, data }

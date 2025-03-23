@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/学习笔记/科技论文写作/2021-09-15.html.vue"
-const data = JSON.parse("{\"path\":\"/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%A7%91%E6%8A%80%E8%AE%BA%E6%96%87%E5%86%99%E4%BD%9C/2021-09-15.html\",\"title\":\"科技论文写作【学习笔记1】\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"科技论文写作【学习笔记1】\",\"createTime\":\"2021/09/15\",\"tags\":[\"科技论文写作\"],\"categories\":[\"学习笔记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.18,\"words\":54},\"git\":{},\"filePathRelative\":\"学习笔记/科技论文写作/2021-09-15.md\",\"categoryList\":[{\"id\":\"078425\",\"sort\":10002,\"name\":\"学习笔记\"},{\"id\":\"fecd9a\",\"sort\":10006,\"name\":\"科技论文写作\"}]}")
-export { comp, data }

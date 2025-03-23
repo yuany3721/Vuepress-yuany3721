@@ -1,3 +1,0 @@
-import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/MCU/2023-06-05.html.vue"
-const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/MCU/2023-06-05.html\",\"title\":\"micropython + vscode配置ESP32开发环境\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"micropython + vscode配置ESP32开发环境\",\"createTime\":\"2023/06/05 16:37:09\",\"tags\":[\"esp32\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.32,\"words\":95},\"git\":{},\"filePathRelative\":\"随记/MCU/2023-06-05.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"e661a6\",\"sort\":10021,\"name\":\"MCU\"}]}")
-export { comp, data }
