@@ -3,3 +3,6 @@ venv/
 # /public
 yarn.lock
 yarn.error
+
+src/.vuepress/.cache
+src/.vuepress/.temp
