@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Docker/2024-10-26.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Docker/2024-10-26.html\",\"title\":\"Docker自建Zerotier Planet\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Docker自建Zerotier Planet\",\"createTime\":\"2024/10/26 19:02:54\",\"tags\":[\"ZeroTier\",\"Docker\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":1.13,\"words\":339},\"git\":{},\"filePathRelative\":\"随记/Docker/2024-10-26.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"472915\",\"sort\":10001,\"name\":\"Docker\"}]}")
+export { comp, data }

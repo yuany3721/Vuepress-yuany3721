@@ -1,17 +1,30 @@
 {
-  "name": "vuepress-reco-yuany3721",
-  "version": "0.0.1",
-  "author": "yuany3721",
+  "name": "vuepress-yuany-3721",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "yuany3721 <li1116@mail.ustc.edu.cn>",
+  "license": "MIT",
+  "engines": {
+    "node": "^18.20.0 || >=20.0.0"
+  },
   "scripts": {
-    "dev": "vuepress dev . --open --host \"localhost\"",
-    "build": "move .\\docs\\CNAME CNAME && vuepress build . && move CNAME .\\docs\\CNAME"
+    "dev": "vuepress dev src",
+    "docs:dev-clean": "vuepress dev src --clean-cache --clean-temp",
+    "build": "vuepress build src --clean-cache --clean-temp",
+    "preview": "http-server docs",
+    "vp-update": "npx vp-update"
   },
   "devDependencies": {
-    "vuepress": "1.8.2",
-    "vuepress-theme-reco": "1.6.10"
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "http-server": "^14.1.1",
+    "sass-embedded": "^1.85.1",
+    "typescript": "^5.7.3",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20",
+    "vuepress-theme-plume": "1.0.0-rc.136"
   },
   "dependencies": {
-    "markdown-it-katex": "^2.0.3",
-    "vuepress-reco-yuany3721": "file:"
+    "vuepress-yuany-3721": "file:"
   }
 }

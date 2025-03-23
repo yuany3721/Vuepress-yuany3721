@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Python/2022-04-17.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Python/2022-04-17.html\",\"title\":\"python依赖固化\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"python依赖固化\",\"createTime\":\"2022/04/17\",\"tags\":[\"Python\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.23,\"words\":70},\"git\":{},\"filePathRelative\":\"随记/Python/2022-04-17.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"2e88e1\",\"sort\":10016,\"name\":\"Python\"}]}")
+export { comp, data }

@@ -1,0 +1,2 @@
+import './articleTagColors.css'
+export const articleTagColors = {"Centos":"3rdx","Windows":"nhaq","Ubuntu":"5moe","LXD":"3rdx","LLM":"mogc","ZeroTier":"7oqx","DNS":"mogc","gcc":"m2o8","转载":"5moe","现代密码学理论与实践":"5moe","教育知识与能力":"3rdx","科技论文写作":"m2o8","信息安全":"aslb","网络安全":"sj9b","量子安全技术白皮书":"hvwz","Docker":"7oqx","docker":"7oqx","git":"klmo","linux":"7oqx","ssh":"sj9b","certbot":"ewyn","ubuntu":"5moe","Python":"hvwz","python":"hvwz","Vue":"ab4m","npm":"fp1z","esp32":"0zl1","Wordpress":"5lk0"}

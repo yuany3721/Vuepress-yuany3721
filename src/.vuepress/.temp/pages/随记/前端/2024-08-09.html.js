@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/前端/2024-08-09.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/%E5%89%8D%E7%AB%AF/2024-08-09.html\",\"title\":\"npm换源\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"npm换源\",\"createTime\":\"2024/08/09 17:36:05\",\"tags\":[\"npm\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.11,\"words\":34},\"git\":{},\"filePathRelative\":\"随记/前端/2024-08-09.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"1733e5\",\"sort\":10014,\"name\":\"前端\"}]}")
+export { comp, data }

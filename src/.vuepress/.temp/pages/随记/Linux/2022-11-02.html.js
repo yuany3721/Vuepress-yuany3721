@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Linux/2022-11-02.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Linux/2022-11-02.html\",\"title\":\"Ubuntu设置swap分区\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Ubuntu设置swap分区\",\"createTime\":\"2022/11/02 16:22:28\",\"tags\":[\"Ubuntu\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.6,\"words\":181},\"git\":{},\"filePathRelative\":\"随记/Linux/2022-11-02.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"d513be\",\"sort\":10017,\"name\":\"Linux\"}]}")
+export { comp, data }

@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Docker/2023-06-25.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Docker/2023-06-25.html\",\"title\":\"dockerfile里修改pip和apt源\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"dockerfile里修改pip和apt源\",\"createTime\":\"2023/06/25 21:13:41\",\"tags\":[\"Docker\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.47,\"words\":142},\"git\":{},\"filePathRelative\":\"随记/Docker/2023-06-25.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"472915\",\"sort\":10001,\"name\":\"Docker\"}]}")
+export { comp, data }

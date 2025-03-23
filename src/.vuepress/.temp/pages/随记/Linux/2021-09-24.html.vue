@@ -1,0 +1,47 @@
+<template><div><blockquote>
+<p>Version: Ubuntu 18.04.6 LTS</p>
+</blockquote>
+<ol>
+<li>
+<p>使用<code v-pre>xrandr</code>查看屏幕信息</p>
+<div class="language-txt line-numbers-mode" data-highlighter="shiki" data-ext="txt" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code><span class="line"><span>Screen 0: minimum 320 x 200, current 1920 x 1080, maximum 8192 x 8192</span></span>
+<span class="line"><span>VGA-0 connected primary 1920x1080+0+0 inverted (normal left inverted right x axis y axis) 0mm x 0mm</span></span>
+<span class="line"><span>    1024x768      60.00</span></span>
+<span class="line"><span>    800x600       60.32    56.25</span></span>
+<span class="line"><span>    848x480       60.00</span></span>
+<span class="line"><span>    640x480       59.94</span></span>
+<span class="line"><span>    1920x1080_60.00  59.96*</span></span>
+<span class="line"><span>HDMI-0 disconnected (normal left inverted right x axis y axis)</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里的信息是修改后的内容，主要注意当前显示器名称，例如我的是 VGA-0</p>
+</li>
+<li>
+<p>获得分辨率详情</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">cvt</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1920</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1080</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD"># 1920x1080 59.96 Hz (CVT 2.07M9) hsync: 67.16 kHz; pclk: 173.00 MHz</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD"># Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意输出中 Modeline 后的内容：&quot;1920x1080_60.00&quot;是 resolution 的名称，整个 Modeline 后所有信息是 newmode 所需信息</p>
+</li>
+<li>
+<p>设置并应用分辨率</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> --newmode</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">1920x1080_60.00</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  173.00</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  1920</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2048</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2248</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2576</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  1080</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1083</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1088</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1120</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> -hsync</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> +vsync</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> --addmode</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> VGA-0</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">1920x1080_60.00</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>设置屏幕翻转</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> -o</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> inverted</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD"># left向左旋转90° right向右旋转90° normal正常显示</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>设置开机自动配置</p>
+<p>向<code v-pre>~/.profile</code>中添加以上步骤中的命令</p>
+<div class="language-bash line-numbers-mode" data-highlighter="shiki" data-ext="bash" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code" v-pre=""><code><span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD"># set display resolution</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">cvt</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1920</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1080</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> --newmode</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">1920x1080_60.00</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  173.00</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  1920</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2048</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2248</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 2576</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91">  1080</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1083</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1088</span><span style="--shiki-light:#2F798A;--shiki-dark:#4C9A91"> 1120</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> -hsync</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> +vsync</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> --addmode</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> VGA-0</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77"> "</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D">1920x1080_60.00</span><span style="--shiki-light:#B5695977;--shiki-dark:#C98A7D77">"</span></span>
+<span class="line"><span style="--shiki-light:#A0ADA0;--shiki-dark:#758575DD"># set display rotation</span></span>
+<span class="line"><span style="--shiki-light:#59873A;--shiki-dark:#80A665">xrandr</span><span style="--shiki-light:#A65E2B;--shiki-dark:#C99076"> -o</span><span style="--shiki-light:#B56959;--shiki-dark:#C98A7D"> inverted</span></span></code></pre>
+<div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+</ol>
+</div></template>
+
+

@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/更新日志/Bot/index.html.vue"
+const data = JSON.parse("{\"path\":\"/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/Bot/\",\"title\":\"Bot更新日志\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Bot更新日志\",\"permalink\":\"/更新日志/Bot/\"},\"headers\":[],\"readingTime\":{\"minutes\":0.74,\"words\":221},\"git\":{},\"filePathRelative\":\"notes/更新日志/Bot/README.md\",\"categoryList\":[{\"id\":\"4358b5\",\"sort\":10007,\"name\":\"notes\"},{\"id\":\"84d646\",\"sort\":10008,\"name\":\"更新日志\"},{\"id\":\"a88d63\",\"sort\":10022,\"name\":\"Bot\"}]}")
+export { comp, data }

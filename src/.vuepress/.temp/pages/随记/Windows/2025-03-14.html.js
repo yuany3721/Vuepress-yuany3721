@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Windows/2025-03-14.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Windows/2025-03-14.html\",\"title\":\"Windows PowerShell 在此系统上禁止运行脚本\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"Windows PowerShell 在此系统上禁止运行脚本\",\"createTime\":\"2025/03/14 22:05:52\",\"tags\":[\"Windows\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.17,\"words\":50},\"git\":{},\"filePathRelative\":\"随记/Windows/2025-03-14.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"106173\",\"sort\":10015,\"name\":\"Windows\"}]}")
+export { comp, data }

@@ -1,0 +1,3 @@
+import comp from "F:/Vuepress-yuany3721/src/.vuepress/.temp/pages/随记/Windows/2025-03-14-ca1117.html.vue"
+const data = JSON.parse("{\"path\":\"/%E9%9A%8F%E8%AE%B0/Windows/2025-03-14-ca1117.html\",\"title\":\"使用nssm注册glances为服务运行\",\"lang\":\"zh-CN\",\"frontmatter\":{\"title\":\"使用nssm注册glances为服务运行\",\"createTime\":\"2025/03/14 22:24:23\",\"tags\":[\"Windows\"],\"categories\":[\"随记\"]},\"headers\":[],\"readingTime\":{\"minutes\":0.4,\"words\":121},\"git\":{},\"filePathRelative\":\"随记/Windows/2025-03-14-ca1117.md\",\"categoryList\":[{\"id\":\"0f870d\",\"sort\":10000,\"name\":\"随记\"},{\"id\":\"106173\",\"sort\":10015,\"name\":\"Windows\"}]}")
+export { comp, data }
