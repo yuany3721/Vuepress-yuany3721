@@ -15,15 +15,15 @@ def newMD(file_date: str, isNow: Boolean, symbol="/"):
     filename = file_date + ".md"
 
     while os.path.exists("src/" + filename):
-        filename = file_date + "-" + nanoid.generate('1234567890abcdef', 6) + ".md"
+        filename = file_date + "-" + nanoid.generate("1234567890abcdef", 6) + ".md"
 
     if isNow:
-        file_date = datetime.strftime(datetime.now(),'%Y-%m-%d %H:%M:%S')
+        file_date = datetime.strftime(datetime.now(), "%Y-%m-%d %H:%M:%S")
 
     with open("src/" + filename, "w") as fp:
         fp.write("---\n")
         fp.write("title: \n")
-        fp.write("date: " + file_date.replace("-", symbol) + "\n")
+        fp.write("createTime: " + file_date.replace("-", symbol) + "\n")
         fp.write("tags: \n    - \n")
         fp.write("categories: \n    - \n")
         fp.write("---\n")
@@ -32,15 +32,12 @@ def newMD(file_date: str, isNow: Boolean, symbol="/"):
 
 
 if __name__ == "__main__":
-    opts, args = getopt.getopt(sys.argv[1:],
-                               "hd:",
-                               ["help", "date="])
+    opts, args = getopt.getopt(sys.argv[1:], "hd:", ["help", "date="])
     file_date = str(date.today())
     isNow = True
     for opt, arg in opts:
         if opt == "-h" or opt == "--help":
-            print("--date\t-d\n"
-                  "\tdefault: today\n\texample: 1999-01-05")
+            print("--date\t-d\n" "\tdefault: today\n\texample: 1999-01-05")
             exit(0)
         elif opt == "-d" or opt == "--date":
             try:

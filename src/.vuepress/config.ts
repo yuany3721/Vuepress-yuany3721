@@ -172,11 +172,12 @@ export default defineUserConfig({
     sidebar: {
       "/tf/": [
         {
-          text: "TF环境配置",
+          text: "TF环境",
           prefix: "/tf",
           items: [
-            { text: "网络拓扑", link: "网络拓扑/" },
+            { text: "网络配置", link: "网络配置/" },
             { text: "系统环境", link: "系统环境/" },
+            { text: "状态监控", link: "状态监控/" },
           ]
         }
       ]
