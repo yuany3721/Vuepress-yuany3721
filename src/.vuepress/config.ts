@@ -100,7 +100,7 @@ export default defineUserConfig({
     },
 
     /* 文章字数统计、阅读时间，设置为 false 则禁用 */
-    // readingTime: true,
+    readingTime: false,
 
     /**
       * markdown
@@ -156,18 +156,30 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/guide/features/encryption/
      */
     encrypt: {
-      // rules: {
-      // 可以是 md 文件的相对路径，对该文件加密
-      // '前端/基础.md': '123456',
-      // 可以是 文件夹的路径，对该目录下所有文章加密
-      // '/notes/vuepress-theme-plume/': '123456',
-      // 可以是 访问地址的请求路径，对该访问路径下所有文章加密
-      // '/vuepress-theme-plume/': '123456',
-      // 可以是 具体的某个页面的请求路径，对该页面加密
-      // '/article/f8dnci3/': '123456',
-      // 如果是 `^` 开头，则匹配该正则表达式的页面也会加密
-      // '^/(a|b)/': '123456',
-      // }
+      rules: {
+        // 可以是 md 文件的相对路径，对该文件加密
+        // '前端/基础.md': '123456',
+        // 可以是 文件夹的路径，对该目录下所有文章加密
+        // '/notes/vuepress-theme-plume/': '123456',
+        // 可以是 访问地址的请求路径，对该访问路径下所有文章加密
+        '/tf/': 'qpqiqpqi',
+        // 可以是 具体的某个页面的请求路径，对该页面加密
+        // '/article/f8dnci3/': '123456',
+        // 如果是 `^` 开头，则匹配该正则表达式的页面也会加密
+        // '^/(a|b)/': '123456',
+      }
     },
+    sidebar: {
+      "/tf/": [
+        {
+          text: "TF环境配置",
+          prefix: "/tf",
+          items: [
+            { text: "网络拓扑", link: "网络拓扑/" },
+            { text: "系统环境", link: "系统环境/" },
+          ]
+        }
+      ]
+    }
   }),
 })

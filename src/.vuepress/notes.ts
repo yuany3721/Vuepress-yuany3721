@@ -6,7 +6,6 @@ export const notes = defineNotesConfig({
   notes: [
     {
       dir: '更新日志',
-
       link: '/更新日志',
       sidebar: "auto",
     },

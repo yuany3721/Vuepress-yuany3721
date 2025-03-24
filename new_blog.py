@@ -10,20 +10,20 @@ import getopt
 import sys
 
 
-def newMD(file_date: String, isNow: Boolean):
+def newMD(file_date: str, isNow: Boolean, symbol="/"):
 
     filename = file_date + ".md"
 
-    while os.path.exists("blogs/" + filename):
+    while os.path.exists("src/" + filename):
         filename = file_date + "-" + nanoid.generate('1234567890abcdef', 6) + ".md"
 
     if isNow:
         file_date = datetime.strftime(datetime.now(),'%Y-%m-%d %H:%M:%S')
 
-    with open("blogs/" + filename, "w") as fp:
+    with open("src/" + filename, "w") as fp:
         fp.write("---\n")
         fp.write("title: \n")
-        fp.write("date: " + file_date + "\n")
+        fp.write("date: " + file_date.replace("-", symbol) + "\n")
         fp.write("tags: \n    - \n")
         fp.write("categories: \n    - \n")
         fp.write("---\n")
@@ -44,7 +44,7 @@ if __name__ == "__main__":
             exit(0)
         elif opt == "-d" or opt == "--date":
             try:
-                file_date = datetime.strptime(arg, "%Y-%m-%d").strftime("%Y-%m-%d")
+                file_date = datetime.strptime(arg, "%Y-%m-%d").strftime("%Y/%m-%d")
             except Exception as e:
                 print(e)
                 print("wrong date formate: " + arg)
