@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "vuepress dev src",
     "docs:dev-clean": "vuepress dev src --clean-cache --clean-temp",
-    "build": "vuepress build src --clean-cache --clean-temp",
+    "build": "move .\\docs\\CNAME CNAME && vuepress build src --clean-cache --clean-temp && move CNAME .\\docs\\CNAME",
     "preview": "http-server docs",
     "vp-update": "npx vp-update"
   },

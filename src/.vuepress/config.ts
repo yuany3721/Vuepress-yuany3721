@@ -176,7 +176,8 @@ export default defineUserConfig({
           prefix: "/tf",
           items: [
             { text: "网络配置", link: "网络配置/" },
-            { text: "系统环境", link: "系统环境/" },
+            { text: "系统环境1", link: "系统环境1/" },
+            { text: "系统环境2", link: "系统环境2/" },
             { text: "状态监控", link: "状态监控/" },
           ]
         }

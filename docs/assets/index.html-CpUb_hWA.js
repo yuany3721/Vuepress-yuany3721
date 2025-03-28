@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./app-YaGH6_b-.js";const o={};function c(r,n){return a(),t("div")}const i=e(o,[["render",c]]),_=JSON.parse('{"path":"/","title":"","lang":"zh-CN","frontmatter":{"config":[{"type":"blog"}],"pageLayout":"home"},"headers":[],"git":{},"filePathRelative":"README.md","categoryList":[]}');export{i as comp,_ as data};
